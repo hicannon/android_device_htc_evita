@@ -1,6 +1,6 @@
 #!/system/bin/sh
+# No path is set up at this point so we have to do it here
 
-# No path is set up at this point so we have to do it here.
 PATH=/sbin:/system/sbin:/system/bin:/system/xbin
 export PATH
 
@@ -30,8 +30,6 @@ case `ls modem.mdt 2>/dev/null` in
 		done
 		;;
 	*)
-        # trying to log here but nothing will be logged since it is
-        # early in the boot process. Is there a way to log this message?
 		log -p w -t PIL 8960 device but no modem image found;;
 esac
 

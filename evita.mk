@@ -132,7 +132,6 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/etc/init.qcom.post_boot.sh:/system/etc/init.qcom.post_boot.sh \
     device/htc/evita/proprietary/etc/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
     device/htc/evita/proprietary/etc/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
-    device/htc/evita/proprietary/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
     device/htc/evita/proprietary/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
 # WPA Supplicant Config

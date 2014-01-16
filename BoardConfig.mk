@@ -5,7 +5,6 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := evita
 TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_INFO_FILE ?= device/htc/evita/bootloader.txt
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
