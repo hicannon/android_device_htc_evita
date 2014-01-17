@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
@@ -43,7 +44,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
     libgenlock \
-    liboverlay
+    liboverlay \
+    memtrack.msm8960
 
 # Omx
 PRODUCT_PACKAGES += \
@@ -268,7 +270,6 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
     device/htc/evita/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so \
     device/htc/evita/proprietary/lib/libposteffect.so:/system/lib/libposteffect.so \
-    device/htc/evita/proprietary/lib/libqc-opt.so:/system/lib/libqc-opt.so \
     device/htc/evita/proprietary/lib/libqdi.so:/system/lib/libqdi.so \
     device/htc/evita/proprietary/lib/libqdp.so:/system/lib/libqdp.so \
     device/htc/evita/proprietary/lib/libqmi.so:/system/lib/libqmi.so \
@@ -282,6 +283,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so \
     device/htc/evita/proprietary/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so \
     device/htc/evita/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:/system/vendor/lib/libWVStreamControlAPI_L3.so \
+    device/htc/evita/proprietary/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so \
     device/htc/evita/proprietary/vendor/lib/libwvm.so:/system/vendor/lib/libwvm.so
 
 # We have enough space to hold precise
@@ -297,6 +299,7 @@ PRODUCT_LOCALES += en_US xhdpi
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     ro.com.google.locationfeatures=1 \
