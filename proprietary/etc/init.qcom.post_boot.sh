@@ -1,5 +1,6 @@
 #!/system/bin/sh
-#
+# Only Evita
+
 echo 1 > /sys/module/rpm_resources/enable_low_power/L2_cache
 echo 1 > /sys/module/rpm_resources/enable_low_power/pxo
 echo 1 > /sys/module/rpm_resources/enable_low_power/vdd_dig
