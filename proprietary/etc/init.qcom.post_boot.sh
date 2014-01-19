@@ -45,8 +45,6 @@ chown -h root.system /sys/devices/system/cpu/mfreq
 echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
 chmod -h 220 /sys/devices/system/cpu/mfreq
 chown -h root.system /sys/devices/system/cpu/cpu1/online
-chown -h root.system /sys/devices/system/cpu/cpu2/online
-chown -h root.system /sys/devices/system/cpu/cpu3/online
 chmod -h 664 /sys/devices/system/cpu/cpu1/online
 
 # set DCVS parameters for CPU
