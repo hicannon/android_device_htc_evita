@@ -16,6 +16,8 @@ This repository contains:
 
 4 - https://github.com/TheMuppets/proprietary_vendor_htc/tree/cm-11.0/evita
 
+5 - https://github.com/TheMuppets/proprietary_vendor_htc/tree/cm-11.0/s4-common
+
 
 
 And also need to compile
