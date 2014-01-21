@@ -240,6 +240,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/lib/libdiag.so:/system/lib/libdiag.so \
     device/htc/evita/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
     device/htc/evita/proprietary/lib/libdsutils.so:/system/lib/libdsutils.so \
+    device/htc/evita/proprietary/lib/libExtendedExtractor.so:/system/lib/libExtendedExtractor.so \
     device/htc/evita/proprietary/lib/libgemini.so:/system/lib/libgemini.so \
     device/htc/evita/proprietary/lib/libgeofence.so:/system/lib/libgeofence.so \
     device/htc/evita/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
