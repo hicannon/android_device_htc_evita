@@ -301,6 +301,7 @@ PRODUCT_LOCALES += en_US xhdpi
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
+    ro.telephony.call_ring.multiple=0 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     ro.com.google.locationfeatures=1 \
