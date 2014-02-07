@@ -59,7 +59,7 @@ USE_OPENGL_RENDERER := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-BOARD_EGL_CFG := device/htc/evita/proprietary/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/htc/evita/prebuilt/lib/egl/egl.cfg
 
 # Radio
 BOARD_RIL_NO_CELLINFOLIST := true
