@@ -149,10 +149,10 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/firmware/wcnss.b02:/system/etc/firmware/wcnss.b02 \
     device/htc/evita/prebuilt/etc/firmware/wcnss.b04:/system/etc/firmware/wcnss.b04 \
     device/htc/evita/prebuilt/etc/firmware/wcnss.mdt:/system/etc/firmware/wcnss.mdt \
-    device/htc/evita/prebuilt/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so \
     device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    device/htc/evita/prebuilt/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so
 
 # Media Config
 PRODUCT_COPY_FILES += \
