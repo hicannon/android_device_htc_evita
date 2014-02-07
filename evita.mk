@@ -111,9 +111,6 @@ PRODUCT_PACKAGES += \
     offmode_charging \
     detect_key
 
-PRODUCT_COPY_FILES += \
-    device/htc/evita/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -127,6 +124,46 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
+# Binary
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/bin/akmd:/system/bin/akmd \
+    device/htc/evita/proprietary/bin/charging:/system/bin/charging \
+    device/htc/evita/proprietary/bin/hci_qcomm_init:/system/bin/hci_qcomm_init \
+    device/htc/evita/proprietary/bin/mm-qcamera-daemon:/system/bin/mm-qcamera-daemon \
+    device/htc/evita/proprietary/bin/mpdecision:/system/bin/mpdecision \
+    device/htc/evita/proprietary/bin/netmgrd:/system/bin/netmgrd \
+    device/htc/evita/proprietary/bin/qmuxd:/system/bin/qmuxd \
+    device/htc/evita/proprietary/bin/rmt_storage:/system/bin/rmt_storage \
+    device/htc/evita/proprietary/bin/thermald:/system/bin/thermald
+
+# Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/etc/firmware/a225_pfp.fw:/system/etc/firmware/a225_pfp.fw \
+    device/htc/evita/proprietary/etc/firmware/a225_pm4.fw:/system/etc/firmware/a225_pm4.fw \
+    device/htc/evita/proprietary/etc/firmware/a225p5_pm4.fw:/system/etc/firmware/a225p5_pm4.fw \
+    device/htc/evita/proprietary/etc/firmware/leia_pfp_470.fw:/system/etc/firmware/leia_pfp_470.fw \
+    device/htc/evita/proprietary/etc/firmware/leia_pm4_470.fw:/system/etc/firmware/leia_pm4_470.fw \
+    device/htc/evita/proprietary/etc/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw \
+    device/htc/evita/proprietary/etc/firmware/wcnss.b00:/system/etc/firmware/wcnss.b00 \
+    device/htc/evita/proprietary/etc/firmware/wcnss.b01:/system/etc/firmware/wcnss.b01 \
+    device/htc/evita/proprietary/etc/firmware/wcnss.b02:/system/etc/firmware/wcnss.b02 \
+    device/htc/evita/proprietary/etc/firmware/wcnss.b04:/system/etc/firmware/wcnss.b04 \
+    device/htc/evita/proprietary/etc/firmware/wcnss.mdt:/system/etc/firmware/wcnss.mdt \
+    device/htc/evita/proprietary/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so \
+    device/htc/evita/proprietary/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/htc/evita/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
+    device/htc/evita/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+
+# Media Config
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/htc/evita/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml
+
+# GPS Config
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/etc/agps_rm:/system/etc/agps_rm \
+    device/htc/evita/gps/gps.conf:system/etc/gps.conf
+
 # Qualcomm Scripts
 PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
@@ -135,23 +172,6 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/etc/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
     device/htc/evita/proprietary/etc/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
     device/htc/evita/proprietary/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
-
-# WPA Supplicant Config
-PRODUCT_COPY_FILES += \
-    device/htc/evita/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
-
-# Media Config
-PRODUCT_COPY_FILES += \
-    device/htc/evita/proprietary/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/evita/proprietary/etc/media_profiles.xml:system/etc/media_profiles.xml
-
-# Thermal config
-PRODUCT_COPY_FILES += \
-    device/htc/evita/proprietary/etc/thermald.conf:system/etc/thermald.conf
-
-# GPS Config
-PRODUCT_COPY_FILES += \
-    device/htc/evita/gps/gps.conf:system/etc/gps.conf
 
 # Sound Configs
 PRODUCT_COPY_FILES += \
@@ -165,68 +185,66 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/etc/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
     device/htc/evita/proprietary/etc/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg
 
-# Keylayouts
+# Adreno
 PRODUCT_COPY_FILES += \
-    device/htc/evita/proprietary/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/evita/proprietary/usr/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/htc/evita/proprietary/usr/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/htc/evita/proprietary/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
-
-# Input Device Config
-PRODUCT_COPY_FILES += \
-    device/htc/evita/proprietary/usr/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/evita/proprietary/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/evita/proprietary/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-    device/htc/evita/proprietary/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
-
-# Propietary Files
-PRODUCT_COPY_FILES += \
-    device/htc/evita/proprietary/bin/akmd:/system/bin/akmd \
-    device/htc/evita/proprietary/bin/charging:/system/bin/charging \
-    device/htc/evita/proprietary/bin/hci_qcomm_init:/system/bin/hci_qcomm_init \
-    device/htc/evita/proprietary/bin/mm-qcamera-daemon:/system/bin/mm-qcamera-daemon \
-    device/htc/evita/proprietary/bin/mpdecision:/system/bin/mpdecision \
-    device/htc/evita/proprietary/bin/netmgrd:/system/bin/netmgrd \
-    device/htc/evita/proprietary/bin/qmuxd:/system/bin/qmuxd \
-    device/htc/evita/proprietary/bin/rmt_storage:/system/bin/rmt_storage \
-    device/htc/evita/proprietary/bin/thermald:/system/bin/thermald \
-    device/htc/evita/proprietary/etc/agps_rm:/system/etc/agps_rm \
-    device/htc/evita/proprietary/etc/firmware/a225_pfp.fw:/system/etc/firmware/a225_pfp.fw \
-    device/htc/evita/proprietary/etc/firmware/a225_pm4.fw:/system/etc/firmware/a225_pm4.fw \
-    device/htc/evita/proprietary/etc/firmware/a225p5_pm4.fw:/system/etc/firmware/a225p5_pm4.fw \
-    device/htc/evita/proprietary/etc/firmware/leia_pfp_470.fw:/system/etc/firmware/leia_pfp_470.fw \
-    device/htc/evita/proprietary/etc/firmware/leia_pm4_470.fw:/system/etc/firmware/leia_pm4_470.fw \
-    device/htc/evita/proprietary/etc/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw \
-    device/htc/evita/proprietary/etc/firmware/wcnss.b00:/system/etc/firmware/wcnss.b00 \
-    device/htc/evita/proprietary/etc/firmware/wcnss.b01:/system/etc/firmware/wcnss.b01 \
-    device/htc/evita/proprietary/etc/firmware/wcnss.b02:/system/etc/firmware/wcnss.b02 \
-    device/htc/evita/proprietary/etc/firmware/wcnss.b04:/system/etc/firmware/wcnss.b04 \
-    device/htc/evita/proprietary/etc/firmware/wcnss.mdt:/system/etc/firmware/wcnss.mdt \
-    device/htc/evita/proprietary/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/htc/evita/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-    device/htc/evita/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     device/htc/evita/proprietary/lib/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
     device/htc/evita/proprietary/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
     device/htc/evita/proprietary/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     device/htc/evita/proprietary/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
     device/htc/evita/proprietary/lib/egl/libplayback_adreno200.so:/system/lib/egl/libplayback_adreno200.so \
     device/htc/evita/proprietary/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-    device/htc/evita/proprietary/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
-    device/htc/evita/proprietary/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
-    device/htc/evita/proprietary/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so \
-    device/htc/evita/proprietary/lib/libBeautyChat.so:/system/lib/libBeautyChat.so \
     device/htc/evita/proprietary/lib/libC2D2.so:/system/lib/libC2D2.so \
-    device/htc/evita/proprietary/lib/libHTC_DIS.so:/system/lib/libHTC_DIS.so \
-    device/htc/evita/proprietary/lib/libI420colorconvert.so:/system/lib/libI420colorconvert.so \
-    device/htc/evita/proprietary/lib/libOpenCL.so:/system/lib/libOpenCL.so \
     device/htc/evita/proprietary/lib/libOpenVG.so:/system/lib/libOpenVG.so \
-    device/htc/evita/proprietary/lib/libacdbloader.so:/system/lib/libacdbloader.so \
-    device/htc/evita/proprietary/lib/libaudcal.so:/system/lib/libaudcal.so \
     device/htc/evita/proprietary/lib/libc2d2_z180.so:/system/lib/libc2d2_z180.so \
+    device/htc/evita/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
+    device/htc/evita/proprietary/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so
+
+# Camera
+PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/lib/libcam_oem_plugin.so:/system/lib/libcam_oem_plugin.so \
     device/htc/evita/proprietary/lib/libcameraasd.so:/system/lib/libcameraasd.so \
     device/htc/evita/proprietary/lib/libcameraface.so:/system/lib/libcameraface.so \
     device/htc/evita/proprietary/lib/libcamerapp.so:/system/lib/libcamerapp.so \
+    device/htc/evita/proprietary/lib/libgemini.so:/system/lib/libgemini.so \
+    device/htc/evita/proprietary/lib/libimage-jpeg-dec-omx-comp.so:/system/lib/libimage-jpeg-dec-omx-comp.so \
+    device/htc/evita/proprietary/lib/libimage-jpeg-enc-omx-comp.so:/system/lib/libimage-jpeg-enc-omx-comp.so \
+    device/htc/evita/proprietary/lib/libimage-omx-common.so:/system/lib/libimage-omx-common.so \
+    device/htc/evita/proprietary/lib/libmmcamera_faceproc.so:/system/lib/libmmcamera_faceproc.so \
+    device/htc/evita/proprietary/lib/libmmcamera_frameproc.so:/system/lib/libmmcamera_frameproc.so \
+    device/htc/evita/proprietary/lib/libmmcamera_hdr_lib.so:/system/lib/libmmcamera_hdr_lib.so \
+    device/htc/evita/proprietary/lib/libmmcamera_image_stab.so:/system/lib/libmmcamera_image_stab.so \
+    device/htc/evita/proprietary/lib/libmmcamera_interface2.so:/system/lib/libmmcamera_interface2.so \
+    device/htc/evita/proprietary/lib/libmmcamera_rawchipproc.so:/system/lib/libmmcamera_rawchipproc.so \
+    device/htc/evita/proprietary/lib/libmmcamera_statsproc31.so:/system/lib/libmmcamera_statsproc31.so \
+    device/htc/evita/proprietary/lib/libmmcamera_wavelet_lib.so:/system/lib/libmmcamera_wavelet_lib.so \
+    device/htc/evita/proprietary/lib/libmmipl.so:/system/lib/libmmipl.so \
+    device/htc/evita/proprietary/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
+    device/htc/evita/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so \
+    device/htc/evita/proprietary/lib/libposteffect.so:/system/lib/libposteffect.so
+
+# Hardware
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
+    device/htc/evita/proprietary/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
+    device/htc/evita/proprietary/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so \
+
+# WPA Supplicant Config
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
+# Thermal config
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/etc/thermald.conf:system/etc/thermald.conf
+
+# Misc
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/lib/libBeautyChat.so:/system/lib/libBeautyChat.so \
+    device/htc/evita/proprietary/lib/libExtendedExtractor.so:/system/lib/libExtendedExtractor.so \
+    device/htc/evita/proprietary/lib/libHTC_DIS.so:/system/lib/libHTC_DIS.so \
+    device/htc/evita/proprietary/lib/libI420colorconvert.so:/system/lib/libI420colorconvert.so \
+    device/htc/evita/proprietary/lib/libOpenCL.so:/system/lib/libOpenCL.so \
+    device/htc/evita/proprietary/lib/libacdbloader.so:/system/lib/libacdbloader.so \
+    device/htc/evita/proprietary/lib/libaudcal.so:/system/lib/libaudcal.so \
     device/htc/evita/proprietary/lib/libchromatix_s5k3h2yx_default_video.so:/system/lib/libchromatix_s5k3h2yx_default_video.so \
     device/htc/evita/proprietary/lib/libchromatix_s5k3h2yx_hdr.so:/system/lib/libchromatix_s5k3h2yx_hdr.so \
     device/htc/evita/proprietary/lib/libchromatix_s5k3h2yx_hfr.so:/system/lib/libchromatix_s5k3h2yx_hfr.so \
@@ -240,37 +258,18 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/lib/libdiag.so:/system/lib/libdiag.so \
     device/htc/evita/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
     device/htc/evita/proprietary/lib/libdsutils.so:/system/lib/libdsutils.so \
-    device/htc/evita/proprietary/lib/libExtendedExtractor.so:/system/lib/libExtendedExtractor.so \
-    device/htc/evita/proprietary/lib/libgemini.so:/system/lib/libgemini.so \
     device/htc/evita/proprietary/lib/libgeofence.so:/system/lib/libgeofence.so \
-    device/htc/evita/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
     device/htc/evita/proprietary/lib/libhtccamera.so:/system/lib/libhtccamera.so \
     device/htc/evita/proprietary/lib/libidl.so:/system/lib/libidl.so \
-    device/htc/evita/proprietary/lib/libimage-jpeg-dec-omx-comp.so:/system/lib/libimage-jpeg-dec-omx-comp.so \
-    device/htc/evita/proprietary/lib/libimage-jpeg-enc-omx-comp.so:/system/lib/libimage-jpeg-enc-omx-comp.so \
-    device/htc/evita/proprietary/lib/libimage-omx-common.so:/system/lib/libimage-omx-common.so \
     device/htc/evita/proprietary/lib/libimu.so:/system/lib/libimu.so \
-    device/htc/evita/proprietary/lib/libllvm-a3xx.so:/system/lib/libllvm-a3xx.so \
     device/htc/evita/proprietary/lib/libloc_api_v02.so:/system/lib/libloc_api_v02.so \
     device/htc/evita/proprietary/lib/libmllite.so:/system/lib/libmllite.so \
     device/htc/evita/proprietary/lib/libmlplatform.so:/system/lib/libmlplatform.so \
     device/htc/evita/proprietary/lib/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
-    device/htc/evita/proprietary/lib/libmmcamera_faceproc.so:/system/lib/libmmcamera_faceproc.so \
-    device/htc/evita/proprietary/lib/libmmcamera_frameproc.so:/system/lib/libmmcamera_frameproc.so \
-    device/htc/evita/proprietary/lib/libmmcamera_hdr_lib.so:/system/lib/libmmcamera_hdr_lib.so \
-    device/htc/evita/proprietary/lib/libmmcamera_image_stab.so:/system/lib/libmmcamera_image_stab.so \
-    device/htc/evita/proprietary/lib/libmmcamera_interface2.so:/system/lib/libmmcamera_interface2.so \
-    device/htc/evita/proprietary/lib/libmmcamera_rawchipproc.so:/system/lib/libmmcamera_rawchipproc.so \
-    device/htc/evita/proprietary/lib/libmmcamera_statsproc31.so:/system/lib/libmmcamera_statsproc31.so \
-    device/htc/evita/proprietary/lib/libmmcamera_wavelet_lib.so:/system/lib/libmmcamera_wavelet_lib.so \
-    device/htc/evita/proprietary/lib/libmmipl.so:/system/lib/libmmipl.so \
-    device/htc/evita/proprietary/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/htc/evita/proprietary/lib/libmmmpod.so:/system/lib/libmmmpod.so \
     device/htc/evita/proprietary/lib/libmmstillomx.so:/system/lib/libmmstillomx.so \
     device/htc/evita/proprietary/lib/libmpl.so:/system/lib/libmpl.so \
     device/htc/evita/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
-    device/htc/evita/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so \
-    device/htc/evita/proprietary/lib/libposteffect.so:/system/lib/libposteffect.so \
     device/htc/evita/proprietary/lib/libqdi.so:/system/lib/libqdi.so \
     device/htc/evita/proprietary/lib/libqdp.so:/system/lib/libqdp.so \
     device/htc/evita/proprietary/lib/libqmi.so:/system/lib/libqmi.so \
@@ -281,11 +280,23 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/proprietary/lib/libqmiservices.so:/system/lib/libqmiservices.so \
     device/htc/evita/proprietary/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \
     device/htc/evita/proprietary/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so \
-    device/htc/evita/proprietary/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so \
-    device/htc/evita/proprietary/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so \
     device/htc/evita/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:/system/vendor/lib/libWVStreamControlAPI_L3.so \
     device/htc/evita/proprietary/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so \
     device/htc/evita/proprietary/vendor/lib/libwvm.so:/system/vendor/lib/libwvm.so
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/evita/proprietary/usr/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
+    device/htc/evita/proprietary/usr/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
+    device/htc/evita/proprietary/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
+
+# Input Device Config
+PRODUCT_COPY_FILES += \
+    device/htc/evita/proprietary/usr/idc/projector_input.idc:system/usr/idc/projector_input.idc \
+    device/htc/evita/proprietary/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+    device/htc/evita/proprietary/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+    device/htc/evita/proprietary/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # We have enough space to hold precise
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -296,7 +307,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-PRODUCT_LOCALES += en_US xhdpi
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
