@@ -1,4 +1,4 @@
 
-LOCAL_PATH := $(call my-dir)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_DEVICE),evita)
+    include $(call all-makefiles-under,$(call my-dir))
+endif
