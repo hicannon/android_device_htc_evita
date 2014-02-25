@@ -5,6 +5,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := evita
 TARGET_NO_BOOTLOADER := true
+TARGET_BOARD_INFO_FILE ?= device/htc/evita/board-info.txt
 
 # Release tools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/evita
