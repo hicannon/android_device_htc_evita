@@ -37,15 +37,6 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
-# Nfc
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_ndef \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras
-
 # 8960 Defaults
 PRODUCT_PACKAGES += \
     camera.msm8960 \
@@ -76,6 +67,15 @@ PRODUCT_PACKAGES += \
     power_test \
     offmode_charging \
     detect_key
+
+# Nfc
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_ndef \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -218,7 +218,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
     device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
-    device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so \
+    device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
 
 # Wpa, Wifi and Thermal Config
 PRODUCT_COPY_FILES += \
@@ -294,9 +294,6 @@ PRODUCT_COPY_FILES += \
 # We have enough space to hold precise
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# Set build date
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
@@ -329,6 +326,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.thermal.monitor=true \
     ro.qc.sdk.audio.fluencetype=fluence \
     ro.use_data_netmgrd=true \
+    wifi.supplicant_scan_interval=255 \
     wifi.interface=wlan0
 
 # Discard inherited values and use our own instead.

@@ -1,7 +1,5 @@
-#
-# system.prop for evita
-#
 
+# evita
 ro.sf.lcd_density=320
 
 # RIL properties
