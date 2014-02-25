@@ -10,6 +10,9 @@ $(call inherit-product, device/htc/evita/evita.mk)
 # Release name
 PRODUCT_RELEASE_NAME := evita
 
+# Boot animation
+TARGET_BOOTANIMATION_NAME := 720
+
 # Setup device specific product configuration.
 PRODUCT_DEVICE := evita
 PRODUCT_NAME := cm_evita
