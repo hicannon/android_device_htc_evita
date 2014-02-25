@@ -46,22 +46,11 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
-
-# Rngd
-PRODUCT_PACKAGES += \
-    qrngd
-
 # 8960 Defaults
 PRODUCT_PACKAGES += \
     camera.msm8960 \
     lights.msm8960 \
-    power.msm8960
-
-# GPS
-PRODUCT_PACKAGES += \
+    power.msm8960 \
     gps.msm8960
 
 # Filesystem
@@ -88,8 +77,10 @@ PRODUCT_PACKAGES += \
     offmode_charging \
     detect_key
 
-# USB
+# Misc
 PRODUCT_PACKAGES += \
+    Torch \
+    qrngd \
     com.android.future.usb.accessory
 
 # NFCEE Access Control
