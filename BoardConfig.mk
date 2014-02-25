@@ -6,6 +6,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 TARGET_BOOTLOADER_BOARD_NAME := evita
 TARGET_NO_BOOTLOADER := true
 
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/evita
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
