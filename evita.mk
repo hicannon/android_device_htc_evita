@@ -229,9 +229,11 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
     device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so \
 
-# WPA Supplicant Config
+# WPA Supplicant and Wifi Config
 PRODUCT_COPY_FILES += \
-    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/htc/evita/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf
 
 # Thermal config
 PRODUCT_COPY_FILES += \
