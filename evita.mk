@@ -322,6 +322,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     persist.service.adb.enable=1 \
     ro.sf.lcd_density=320 \
+    ro.config.low_ram=true \
     wifi.supplicant_scan_interval=255 \
     wifi.interface=wlan0
 
