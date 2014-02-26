@@ -323,6 +323,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     ro.sf.lcd_density=320 \
     ro.config.low_ram=true \
+    dalvik.vm.jit.codecachesize=0 \
     wifi.supplicant_scan_interval=255 \
     wifi.interface=wlan0
 
