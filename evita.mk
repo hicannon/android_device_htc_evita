@@ -44,11 +44,6 @@ PRODUCT_PACKAGES += \
     power.msm8960 \
     gps.msm8960
 
-# Filesystem
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.sh \
@@ -77,20 +72,16 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# Filesystem
+PRODUCT_PACKAGES += \
+    make_ext4fs \
+    setup_fs
+
 # Misc
 PRODUCT_PACKAGES += \
     Torch \
     qrngd \
     com.android.future.usb.accessory
-
-# NFCEE Access Control
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/htc/evita/prebuilt/etc/nfcee_access.xml
-else
-    NFCEE_ACCESS_PATH := device/htc/evita/prebuilt/etc/nfcee_access_debug.xml
-endif
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -220,8 +211,9 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
     device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
 
-# Wpa, Wifi and Thermal Config
+# WPA, WIFI, NFCEE and Thermal Config
 PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
     device/htc/evita/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
     device/htc/evita/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
     device/htc/evita/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
