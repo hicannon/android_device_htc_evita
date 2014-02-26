@@ -326,6 +326,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.thermal.monitor=true \
     ro.qc.sdk.audio.fluencetype=fluence \
     ro.use_data_netmgrd=true \
+    persist.sys.root_access=3 \
+    ro.secure=0 \
+    persist.service.adb.enable=1 \
+    ro.sf.lcd_density=320 \
     wifi.supplicant_scan_interval=255 \
     wifi.interface=wlan0
 

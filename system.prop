@@ -1,7 +1,4 @@
 
-# evita
-ro.sf.lcd_density=320
-
 # RIL properties
 mobiledata.interfaces=rmnet0,rmnet1
 ro.telephony.default_network=9
@@ -48,7 +45,6 @@ net.tcp.buffersize.wifi=524288,1048576,2097152,524288,1048576,2097152
 
 # UMS and Quick boot mode
 persist.sys.purgeable_assets=1
-persist.sys.root_access=3
 persist.sys.usb.config=mass_storage,adb
 persist.sys.use_16bpp_alpha=1
 ro.vold.umsdirtyratio=40
