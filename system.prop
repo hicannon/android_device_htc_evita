@@ -26,7 +26,7 @@ ro.camcorder.videoModes=true
 ro.media.dec.jpeg.memcap=8000000
 ro.media.enc.hprof.vid.bps=8000000
 ro.media.enc.hprof.vid.fps=65
-ro.media.enc.jpeg.quality=100
+ro.media.enc.jpeg.quality=90
 ro.media.panorama.defres=3264x1840
 ro.media.panorama.frameres=1280x720
 
