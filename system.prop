@@ -1,5 +1,5 @@
 
-# RIL properties
+# RIL
 mobiledata.interfaces=rmnet0,rmnet1
 ro.telephony.default_network=9
 DEVICE_PROVISIONED=1
@@ -15,7 +15,7 @@ debug.nfc.fw_boot_download=false
 debug.nfc.se=true
 ro.nfc.port=I2C
 
-# Media Tweaks
+# Media
 media.stagefright.enable-http=true
 media.stagefright.enable-meta=true
 media.stagefright.enable-player=true
@@ -30,7 +30,7 @@ ro.media.enc.jpeg.quality=90
 ro.media.panorama.defres=3264x1840
 ro.media.panorama.frameres=1280x720
 
-# Network Tweaks
+# Network
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 net.ppp0.dns1=8.8.8.8
@@ -43,7 +43,7 @@ net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144
 net.tcp.buffersize.umts=6144,87380,1048576,6144,87380,524288
 net.tcp.buffersize.wifi=524288,1048576,2097152,524288,1048576,2097152
 
-# Hardware info
+# Hardware
 ro.device.chipset=Qualcomm MSM8960 Snapdragon S4
 ro.device.cpu=ARMv7 Dual-core 1.5 GHz Krait
 ro.device.gpu=Adreno 225
