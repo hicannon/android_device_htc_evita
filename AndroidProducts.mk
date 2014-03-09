@@ -1,3 +1,2 @@
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evita.mk
+PRODUCT_MAKEFILES := device/htc/evita/evita.mk
