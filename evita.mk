@@ -326,6 +326,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     ro.sf.lcd_density=320 \
     ro.config.low_ram=true \
+    persist.adb.paranoid=1 \
     persist.sys.purgeable_assets=1 \
     persist.sys.usb.config=mass_storage,adb \
     persist.sys.use_16bpp_alpha=1 \
