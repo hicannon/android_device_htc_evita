@@ -264,7 +264,10 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libqmi_encdec.so:/system/lib/libqmi_encdec.so \
     device/htc/evita/prebuilt/lib/libqmiservices.so:/system/lib/libqmiservices.so \
     device/htc/evita/prebuilt/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \
-    device/htc/evita/prebuilt/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so \
+    device/htc/evita/prebuilt/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so
+
+# Vendor
+PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/vendor/lib/libWVStreamControlAPI_L3.so:/system/vendor/lib/libWVStreamControlAPI_L3.so \
     device/htc/evita/prebuilt/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so \
     device/htc/evita/prebuilt/vendor/lib/libwvm.so:/system/vendor/lib/libwvm.so
