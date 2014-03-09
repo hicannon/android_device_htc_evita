@@ -30,7 +30,7 @@ ro.media.enc.jpeg.quality=90
 ro.media.panorama.defres=3264x1840
 ro.media.panorama.frameres=1280x720
 
-# WIFI and 3G Tweaks
+# Network Tweaks
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 net.ppp0.dns1=8.8.8.8
@@ -42,12 +42,6 @@ net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576
 net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144
 net.tcp.buffersize.umts=6144,87380,1048576,6144,87380,524288
 net.tcp.buffersize.wifi=524288,1048576,2097152,524288,1048576,2097152
-
-# UMS and Quick boot mode
-persist.sys.purgeable_assets=1
-persist.sys.usb.config=mass_storage,adb
-persist.sys.use_16bpp_alpha=1
-ro.vold.umsdirtyratio=40
 
 # Hardware info
 ro.device.chipset=Qualcomm MSM8960 Snapdragon S4

@@ -283,14 +283,14 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
     device/htc/evita/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
-# We have enough space to hold precise
+# Tags
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# Device uses high-density artwork where available
+# Device Density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# Extra properties
+# Product Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
     ro.telephony.call_ring.multiple=0 \
@@ -323,11 +323,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     ro.sf.lcd_density=320 \
     ro.config.low_ram=true \
+    persist.sys.purgeable_assets=1 \
+    persist.sys.usb.config=mass_storage,adb \
+    persist.sys.use_16bpp_alpha=1 \
+    ro.vold.umsdirtyratio=40 \
     dalvik.vm.jit.codecachesize=0 \
     wifi.supplicant_scan_interval=255 \
     wifi.interface=wlan0
 
-# Discard inherited values and use our own instead.
+# Device Properties
 PRODUCT_DEVICE := evita
 PRODUCT_NAME := evita
 PRODUCT_BRAND := htc
