@@ -5,7 +5,7 @@ Device overlay for One XL
 
 
 
-This repository contains: 
+This repository contains:
 
 
 1 - https://github.com/CyanogenMod/android_device_htc_evita/tree/cm-11.0

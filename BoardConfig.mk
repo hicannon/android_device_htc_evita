@@ -3,11 +3,11 @@ BOARD_VENDOR := htc
 TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := evita
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_INFO_FILE ?= device/htc/evita/board-info.txt
 
-# Release tools
+# Extensions
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/evita
 
 # Platform
@@ -32,13 +32,15 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 TARGET_KERNEL_SOURCE := kernel/htc/evita
 TARGET_KERNEL_CONFIG := elite_defconfig
 
-# QCOM hardware
+# QCOM
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_QCOM_DISPLAY_VARIANT := caf
 TARGET_QCOM_MEDIA_VARIANT := caf
 TARGET_USES_QCOM_BSP := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -49,17 +51,24 @@ TARGET_USES_QCOM_COMPRESSED_AUDIO := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BLUETOOTH_HCI_USE_MCT := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/evita/bluetooth
 
 # Graphics
-TARGET_DISPLAY_INSECURE_MM_HEAP := true
 USE_OPENGL_RENDERER := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
+TARGET_DISPLAY_INSECURE_MM_HEAP := true
 BOARD_EGL_CFG := device/htc/evita/prebuilt/lib/egl/egl.cfg
+
+# Camera
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
+COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Radio
 BOARD_RIL_NO_CELLINFOLIST := true
@@ -80,17 +89,6 @@ TARGET_POWERHAL_NO_TOUCH_BOOST := true
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
-
-# Camera
-BOARD_NEEDS_MEMORYHEAPPMEM := true
-COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
-COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
-COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
-USE_DEVICE_SPECIFIC_CAMERA := true
-
-# Flags
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
-COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -114,7 +112,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
-USE_SET_METADATA := false
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB = device/htc/evita/rootdir/etc/fstab.qcom
 
@@ -132,8 +129,7 @@ TW_INCLUDE_DUMLOCK := true
 TW_INCLUDE_JB_CRYPTO := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/htc/evita/sepolicy
+BOARD_SEPOLICY_DIRS += device/htc/evita/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     app.te \
@@ -141,12 +137,12 @@ BOARD_SEPOLICY_UNION += \
     device.te \
     domain.te \
     drmserver.te \
-    file_contexts \
     file.te \
+    file_contexts \
     hci_init.te \
     healthd.te \
-    init_shell.te \
     init.te \
+    init_shell.te \
     keystore.te \
     kickstart.te \
     mediaserver.te \
@@ -154,13 +150,13 @@ BOARD_SEPOLICY_UNION += \
     surfaceflinger.te \
     system.te \
     ueventd.te \
-    wpa_socket.te \
-    wpa.te
+    wpa.te \
+    wpa_socket.te
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/htc/evita/cmhw
 
-# Charge mode
+# Charge
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
 # USB

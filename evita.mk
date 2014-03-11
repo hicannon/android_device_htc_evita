@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
     liboverlay \
     memtrack.msm8960
 
-# Omx
+# OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libdivxdrmdecrypt \
@@ -37,11 +37,11 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
-# 8960 Defaults
+# MSM8960
 PRODUCT_PACKAGES += \
-    camera.msm8960 \
     lights.msm8960 \
     power.msm8960 \
+    camera.msm8960 \
     gps.msm8960
 
 # Ramdisk
@@ -63,7 +63,7 @@ PRODUCT_PACKAGES += \
     offmode_charging \
     detect_key
 
-# Nfc
+# NFC
 PRODUCT_PACKAGES += \
     libnfc \
     libnfc_ndef \
@@ -132,8 +132,8 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/firmware/wcnss.b04:/system/etc/firmware/wcnss.b04 \
     device/htc/evita/prebuilt/etc/firmware/wcnss.mdt:/system/etc/firmware/wcnss.mdt \
     device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
-    device/htc/evita/prebuilt/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so
+    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
+    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Media Config
 PRODUCT_COPY_FILES += \
@@ -143,7 +143,7 @@ PRODUCT_COPY_FILES += \
 # GPS Config
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/agps_rm:/system/etc/agps_rm \
-    device/htc/evita/gps/gps.conf:system/etc/gps.conf
+    device/htc/evita/prebuilt/etc/gps.conf:system/etc/gps.conf
 
 # Qualcomm Scripts
 PRODUCT_COPY_FILES += \
@@ -152,7 +152,16 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.qcom.post_boot.sh:/system/etc/init.qcom.post_boot.sh \
     device/htc/evita/prebuilt/etc/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
     device/htc/evita/prebuilt/etc/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
+    device/htc/evita/prebuilt/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
     device/htc/evita/prebuilt/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
+
+# WPA, WIFI, NFC and Thermal config
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
+    device/htc/evita/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
+    device/htc/evita/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf
 
 # Sound Configs
 PRODUCT_COPY_FILES += \
@@ -210,15 +219,6 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
     device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
 
-# WPA, WIFI, NFCEE and Thermal Config
-PRODUCT_COPY_FILES += \
-    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-    device/htc/evita/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    device/htc/evita/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
-    device/htc/evita/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf
-
 # Chromatix
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_default_video.so:/system/lib/libchromatix_s5k3h2yx_default_video.so \
@@ -268,6 +268,7 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so \
     device/htc/evita/prebuilt/vendor/lib/libWVStreamControlAPI_L3.so:/system/vendor/lib/libWVStreamControlAPI_L3.so \
     device/htc/evita/prebuilt/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so \
     device/htc/evita/prebuilt/vendor/lib/libwvm.so:/system/vendor/lib/libwvm.so
@@ -279,11 +280,11 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
     device/htc/evita/prebuilt/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
-# Input Device Config
+# Input device config
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/evita/prebuilt/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/evita/prebuilt/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+    device/htc/evita/prebuilt/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/evita/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # Tags
@@ -295,17 +296,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Product Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
-    ro.telephony.call_ring.multiple=0 \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y \
-    persist.gps.qmienabled=true \
-    ro.baseband.arch=msm \
-    ro.opengles.version=131072 \
-    ro.product.wireless=WCN3660 \
-    ro.qualcomm.bt.hci_transport=smd \
+    ro.sf.lcd_density=320 \
     com.qc.hardware=true \
     debug.composition.type=dyn \
     debug.egl.hw=1 \
@@ -320,20 +311,30 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     persist.thermal.monitor=true \
     ro.qc.sdk.audio.fluencetype=fluence \
+    ro.telephony.call_ring.multiple=0 \
     ro.use_data_netmgrd=true \
-    persist.sys.root_access=3 \
-    ro.secure=0 \
-    persist.service.adb.enable=1 \
-    ro.sf.lcd_density=320 \
-    ro.config.low_ram=true \
-    persist.adb.paranoid=1 \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=255 \
     persist.sys.purgeable_assets=1 \
     persist.sys.usb.config=mass_storage,adb \
     persist.sys.use_16bpp_alpha=1 \
     ro.vold.umsdirtyratio=40 \
+    persist.sys.root_access=3 \
+    ro.secure=0 \
+    ro.config.low_ram=true \
+    persist.adb.paranoid=1 \
+    persist.service.adb.enable=1 \
+    persist.gps.qmienabled=true \
+    ro.baseband.arch=msm \
+    ro.opengles.version=131072 \
+    ro.product.wireless=WCN3660 \
+    ro.qualcomm.bt.hci_transport=smd \
+    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
+    ro.setupwizard.enable_bypass=1 \
+    dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.jit.codecachesize=0 \
-    wifi.supplicant_scan_interval=255 \
-    wifi.interface=wlan0
+    ro.com.google.locationfeatures=1 \
+    dalvik.vm.dexopt-flags=m=y
 
 # Device Properties
 PRODUCT_DEVICE := evita
