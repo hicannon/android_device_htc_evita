@@ -1,3 +1,4 @@
+
 # RIL
 mobiledata.interfaces=rmnet0,rmnet1
 ro.telephony.default_network=9
@@ -15,6 +16,7 @@ debug.nfc.se=true
 ro.nfc.port=I2C
 
 # Teawks
+ro.ril.disable.power.collapse=1
 pm.sleep_mode=1
 
 # Media
