@@ -321,6 +321,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=40 \
     persist.sys.root_access=3 \
     ro.secure=0 \
+    ro.debuggable=1 \
+    persist.service.debuggable=1 \
     ro.config.low_ram=true \
     persist.adb.paranoid=1 \
     persist.service.adb.enable=1 \
@@ -334,6 +336,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.jit.codecachesize=0 \
     ro.com.google.locationfeatures=1 \
+    dalvik.vm.checkjni=false \
     dalvik.vm.dexopt-flags=m=v,o=y
 
 # Device Properties
