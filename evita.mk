@@ -333,10 +333,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd \
     ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
     ro.setupwizard.enable_bypass=1 \
+    ro.com.google.locationfeatures=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.jit.codecachesize=0 \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.execution-mode=int:jit \
     dalvik.vm.checkjni=false \
     dalvik.vm.dexopt-flags=m=v,o=y
 
