@@ -15,7 +15,7 @@ debug.nfc.fw_boot_download=false
 debug.nfc.se=true
 ro.nfc.port=I2C
 
-# Teawks
+# Tweaks
 mot.proximity.delay=25
 pm.sleep_mode=1
 power_supply.wakeup=enable
@@ -30,6 +30,7 @@ ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
 ro.lge.proximity.delay=25
 ro.ril.disable.power.collapse=1
+ro.telephony.call_ring.delay=0
 windowsmgr.max_events_per_sec=128
 
 # Media
