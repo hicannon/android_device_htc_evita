@@ -334,7 +334,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.jit.codecachesize=0 \
     ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y
+    dalvik.vm.dexopt-flags=m=v,o=y
 
 # Device Properties
 PRODUCT_DEVICE := evita
