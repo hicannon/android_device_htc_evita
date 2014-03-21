@@ -337,10 +337,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=40 \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=255
-
-# Device Properties
-PRODUCT_DEVICE := evita
-PRODUCT_NAME := evita
-PRODUCT_BRAND := htc
-PRODUCT_MODEL := One XL
-PRODUCT_MANUFACTURER := HTC
