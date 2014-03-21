@@ -307,7 +307,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     lpa.decode=true \
-    persist.adb.paranoid=1 \
     persist.audio.fluence.mode=endfire \
     persist.audio.handset.mic=digital \
     persist.audio.speaker.location=high \
