@@ -48,6 +48,16 @@ ro.media.enc.jpeg.quality=90
 ro.media.panorama.defres=3264x1840
 ro.media.panorama.frameres=1280x720
 
+# 3G/HSDPA
+ro.ril.enable.3g.prefix=1
+ro.ril.enable.a53=1
+ro.ril.enable.dtm=1
+ro.ril.gprsclass=12
+ro.ril.hep=1
+ro.ril.hsdpa.category=8
+ro.ril.hsupa.category=5
+ro.ril.hsxpa=2
+
 # Network
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
