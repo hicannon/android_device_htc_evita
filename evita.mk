@@ -280,21 +280,14 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
     device/htc/evita/prebuilt/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
-# Input device config
+# Input Device Config
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/evita/prebuilt/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
     device/htc/evita/prebuilt/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/evita/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
-# Tags
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# Device Density
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-# Product Properties
+# Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
     dalvik.vm.checkjni=false \
@@ -337,3 +330,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=40 \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=255
+
+# Device Tags
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Device Density
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
