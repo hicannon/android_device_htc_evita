@@ -149,7 +149,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
     device/htc/evita/prebuilt/etc/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh \
-    device/htc/evita/prebuilt/etc/init.qcom.post_boot.sh:/system/etc/init.qcom.post_boot.sh \
     device/htc/evita/prebuilt/etc/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
     device/htc/evita/prebuilt/etc/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
     device/htc/evita/prebuilt/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
