@@ -140,10 +140,11 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/evita/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-# GPS Config
+# GPS and Host Config
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/agps_rm:/system/etc/agps_rm \
-    device/htc/evita/prebuilt/etc/gps.conf:system/etc/gps.conf
+    device/htc/evita/prebuilt/etc/gps.conf:system/etc/gps.conf \
+    device/htc/evita/prebuilt/etc/host:system/etc/host
 
 # Qualcomm Scripts
 PRODUCT_COPY_FILES += \
