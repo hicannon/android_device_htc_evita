@@ -144,7 +144,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/agps_rm:/system/etc/agps_rm \
     device/htc/evita/prebuilt/etc/gps.conf:system/etc/gps.conf \
-    device/htc/evita/prebuilt/etc/host:system/etc/host
+    device/htc/evita/prebuilt/etc/hosts:system/etc/hosts
 
 # Qualcomm Scripts
 PRODUCT_COPY_FILES += \
