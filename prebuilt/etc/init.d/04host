@@ -1,0 +1,8 @@
+#!/system/bin/sh
+# Host Script xD
+
+cd /system/etc/
+rm hosts
+mv host hosts
+chmod 777 hosts
+rm /init.d/host
