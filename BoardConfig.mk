@@ -112,7 +112,7 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_FSTAB = device/htc/evita/fstab.qcom
+TARGET_RECOVERY_FSTAB = device/htc/evita/rootdir/etc/fstab.qcom
 
 # CWM
 BOARD_HAS_NO_SELECT_BUTTON := true
