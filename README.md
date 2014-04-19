@@ -1,9 +1,6 @@
 HTC One XL "EVITA"
 ==================
 
-Device overlay for One XL
-
-
 
 This repository need to compile:
 
