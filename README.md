@@ -1,8 +1,5 @@
-android_device_htc_evita
-========================
-
-Device overlay for One XL
-
+HTC One XL "EVITA"
+==================
 
 
 This repository contains:
