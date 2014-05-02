@@ -51,8 +51,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     ueventd.qcom.rc \
     fstab.qcom \
-    init.target.rc \
-    remount.qcom
+    init.target.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -151,8 +150,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
     device/htc/evita/prebuilt/etc/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh \
-    device/htc/evita/prebuilt/etc/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
-    device/htc/evita/prebuilt/etc/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
     device/htc/evita/prebuilt/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
     device/htc/evita/prebuilt/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
