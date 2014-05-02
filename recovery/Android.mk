@@ -1,50 +1,49 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE		:= init.recovery.qcom.rc
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= ETC
-LOCAL_SRC_FILES		:= etc/init.recovery.qcom.rc
-LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+LOCAL_MODULE       := init.recovery.qcom.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := init.recovery.qcom.rc
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE		:= lpm.rc
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= ETC
-LOCAL_SRC_FILES		:= etc/lpm.rc
-LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
+LOCAL_MODULE       := lpm.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := lpm.rc
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE		:= choice_fn
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= EXECUTABLES
-LOCAL_SRC_FILES		:= sbin/choice_fn
-LOCAL_MODULE_PATH	:= $(TARGET_RECOVERY_ROOT_OUT)/sbin
+LOCAL_MODULE       := choice_fn
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_SRC_FILES    := choice_fn
+LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE		:= power_test
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= EXECUTABLES
-LOCAL_SRC_FILES		:= sbin/power_test
-LOCAL_MODULE_PATH	:= $(TARGET_RECOVERY_ROOT_OUT)/sbin
+LOCAL_MODULE       := power_test
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_SRC_FILES    := power_test
+LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE		:= offmode_charging
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= EXECUTABLES
-LOCAL_SRC_FILES		:= sbin/offmode_charging
-LOCAL_MODULE_PATH	:= $(TARGET_RECOVERY_ROOT_OUT)/sbin
+LOCAL_MODULE       := offmode_charging
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_SRC_FILES    := offmode_charging
+LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE		:= detect_key
-LOCAL_MODULE_TAGS	:= optional eng
-LOCAL_MODULE_CLASS	:= EXECUTABLES
-LOCAL_SRC_FILES		:= sbin/detect_key
-LOCAL_MODULE_PATH	:= $(TARGET_RECOVERY_ROOT_OUT)/sbin
+LOCAL_MODULE       := detect_key
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_SRC_FILES    := detect_key
+LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 include $(BUILD_PREBUILT)
-
