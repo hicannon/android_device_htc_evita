@@ -285,6 +285,12 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/evita/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
+# Device Default Properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3 \
+    ro.debuggable=1 \
+    ro.secure=0
+
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
@@ -307,19 +313,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
     persist.sys.purgeable_assets=1 \
-    persist.sys.root_access=3 \
     persist.sys.usb.config=mtp \
     persist.sys.use_16bpp_alpha=1 \
     persist.thermal.monitor=true \
     ro.baseband.arch=msm \
     ro.com.google.locationfeatures=1 \
     ro.config.low_ram=true \
-    ro.debuggable=1 \
     ro.opengles.version=131072 \
     ro.product.wireless=WCN3660 \
     ro.qc.sdk.audio.fluencetype=fluence \
     ro.qualcomm.bt.hci_transport=smd \
-    ro.secure=0 \
     ro.setupwizard.enable_bypass=1 \
     ro.sf.lcd_density=320 \
     ro.telephony.call_ring.multiple=0 \
