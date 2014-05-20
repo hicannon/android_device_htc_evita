@@ -281,8 +281,6 @@ PRODUCT_COPY_FILES += \
 # Input Device Config
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/evita/prebuilt/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/evita/prebuilt/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/evita/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # Device Default Properties
