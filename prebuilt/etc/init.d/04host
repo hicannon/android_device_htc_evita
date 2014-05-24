@@ -1,9 +1,7 @@
 #!/system/bin/sh
 # Host Script xD
 
-busybox mount -o rw,remount /dev/block/mmcblk0p33 /system;
 busybox rm -f /system/etc/hosts;
 busybox mv /system/etc/host /system/etc/hosts;
 busybox chmod 777 /system/etc/hosts;
 busybox rm -f /system/etc/init.d/04host;
-busybox mount -o ro,remount /dev/block/mmcblk0p33 /system;
