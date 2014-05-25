@@ -3,8 +3,6 @@ $(call inherit-product, build/target/product/languages_full.mk)
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/evita/overlay
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
