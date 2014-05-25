@@ -187,6 +187,12 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
     device/htc/evita/prebuilt/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so
 
+# Hardware
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
+    device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
+    device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
+
 # Camera
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libcam_oem_plugin.so:/system/lib/libcam_oem_plugin.so \
@@ -210,12 +216,6 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/htc/evita/prebuilt/lib/liboemcamera.so:/system/lib/liboemcamera.so \
     device/htc/evita/prebuilt/lib/libposteffect.so:/system/lib/libposteffect.so
-
-# Hardware
-PRODUCT_COPY_FILES += \
-    device/htc/evita/prebuilt/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
-    device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
-    device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
 
 # Chromatix
 PRODUCT_COPY_FILES += \
