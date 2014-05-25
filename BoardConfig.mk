@@ -127,6 +127,9 @@ BOARD_RIL_NO_CELLINFOLIST := true
 # Libril
 BOARD_PROVIDES_LIBRIL := true
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += device/htc/evita/overlay
+
 # SELinux
 BOARD_SEPOLICY_DIRS += device/htc/evita/sepolicy
 
