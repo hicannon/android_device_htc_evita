@@ -284,8 +284,7 @@ PRODUCT_COPY_FILES += \
 # Device Default Properties
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3 \
-    ro.debuggable=1 \
-    ro.secure=0
+    ro.adb.secure=3
 
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -313,6 +312,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.use_16bpp_alpha=1 \
     persist.thermal.monitor=true \
     ro.baseband.arch=msm \
+    ro.debuggable=1 \
     ro.com.google.locationfeatures=1 \
     ro.config.low_ram=true \
     ro.opengles.version=131072 \
