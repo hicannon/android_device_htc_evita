@@ -44,7 +44,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.rc \
     ueventd.qcom.rc \
@@ -147,9 +146,7 @@ PRODUCT_COPY_FILES += \
 # Qualcomm Scripts
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
-    device/htc/evita/prebuilt/etc/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh \
-    device/htc/evita/prebuilt/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
-    device/htc/evita/prebuilt/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
+    device/htc/evita/prebuilt/etc/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh
 
 # WPA, WIFI, NFC and Thermal config
 PRODUCT_COPY_FILES += \
