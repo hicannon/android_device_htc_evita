@@ -77,6 +77,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch \
     qrngd \
+    libwcnss_qmi \
+    wcnss_service \
     com.android.future.usb.accessory
 
 # Permissions
@@ -128,7 +130,6 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/firmware/wcnss.b04:/system/etc/firmware/wcnss.b04 \
     device/htc/evita/prebuilt/etc/firmware/wcnss.mdt:/system/etc/firmware/wcnss.mdt \
     device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Media Config
@@ -154,7 +155,8 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
     device/htc/evita/prebuilt/etc/wifi/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
     device/htc/evita/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf
+    device/htc/evita/prebuilt/etc/wifi/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/htc/evita/prebuilt/etc/wifi/WCNSS_qcom_cfg.ini:/system/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Sound Configs
 PRODUCT_COPY_FILES += \
