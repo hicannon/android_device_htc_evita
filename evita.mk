@@ -312,6 +312,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.baseband.arch=msm \
     ro.debuggable=1 \
     ro.com.google.locationfeatures=1 \
+    ro.ksm.default=1 \
     ro.opengles.version=131072 \
     ro.product.wireless=WCN3660 \
     ro.qc.sdk.audio.fluencetype=fluence \
