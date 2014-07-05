@@ -100,7 +100,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/htc/s4-common/recovery/source/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/htc/evita/recovery/recovery_keys.c
 
 # TWRP
 BOARD_HAS_NO_REAL_SDCARD := true
