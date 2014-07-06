@@ -179,6 +179,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/egl/libplayback_adreno200.so:/system/lib/egl/libplayback_adreno200.so \
     device/htc/evita/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
     device/htc/evita/prebuilt/lib/libC2D2.so:/system/lib/libC2D2.so \
+    device/htc/evita/prebuilt/lib/libOpenCL.so:/system/lib/libOpenCL.so \
     device/htc/evita/prebuilt/lib/libOpenVG.so:/system/lib/libOpenVG.so \
     device/htc/evita/prebuilt/lib/libc2d2_z180.so:/system/lib/libc2d2_z180.so \
     device/htc/evita/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
@@ -189,6 +190,11 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
     device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
     device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
+
+# Audio
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/lib/libacdbloader.so:/system/lib/libacdbloader.so \
+    device/htc/evita/prebuilt/lib/libaudcal.so:/system/lib/libaudcal.so
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -214,6 +220,13 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/liboemcamera.so:/system/lib/liboemcamera.so \
     device/htc/evita/prebuilt/lib/libposteffect.so:/system/lib/libposteffect.so
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/lib/libimu.so:/system/lib/libimu.so \
+    device/htc/evita/prebuilt/lib/libmllite.so:/system/lib/libmllite.so \
+    device/htc/evita/prebuilt/lib/libmlplatform.so:/system/lib/libmlplatform.so \
+    device/htc/evita/prebuilt/lib/libmpl.so:/system/lib/libmpl.so
+
 # Chromatix
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_default_video.so:/system/lib/libchromatix_s5k3h2yx_default_video.so \
@@ -227,29 +240,12 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_preview.so:/system/lib/libchromatix_s5k6a1gx_preview.so \
     device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_zsl.so:/system/lib/libchromatix_s5k6a1gx_zsl.so
 
-# Misc
+# QMI
 PRODUCT_COPY_FILES += \
-    device/htc/evita/prebuilt/lib/libBeautyChat.so:/system/lib/libBeautyChat.so \
-    device/htc/evita/prebuilt/lib/libExtendedExtractor.so:/system/lib/libExtendedExtractor.so \
-    device/htc/evita/prebuilt/lib/libHTC_DIS.so:/system/lib/libHTC_DIS.so \
-    device/htc/evita/prebuilt/lib/libI420colorconvert.so:/system/lib/libI420colorconvert.so \
-    device/htc/evita/prebuilt/lib/libOpenCL.so:/system/lib/libOpenCL.so \
-    device/htc/evita/prebuilt/lib/libacdbloader.so:/system/lib/libacdbloader.so \
-    device/htc/evita/prebuilt/lib/libaudcal.so:/system/lib/libaudcal.so \
     device/htc/evita/prebuilt/lib/libdiag.so:/system/lib/libdiag.so \
     device/htc/evita/prebuilt/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
     device/htc/evita/prebuilt/lib/libdsutils.so:/system/lib/libdsutils.so \
-    device/htc/evita/prebuilt/lib/libgeofence.so:/system/lib/libgeofence.so \
     device/htc/evita/prebuilt/lib/libidl.so:/system/lib/libidl.so \
-    device/htc/evita/prebuilt/lib/libimu.so:/system/lib/libimu.so \
-    device/htc/evita/prebuilt/lib/libloc_api_v02.so:/system/lib/libloc_api_v02.so \
-    device/htc/evita/prebuilt/lib/libmllite.so:/system/lib/libmllite.so \
-    device/htc/evita/prebuilt/lib/libmlplatform.so:/system/lib/libmlplatform.so \
-    device/htc/evita/prebuilt/lib/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
-    device/htc/evita/prebuilt/lib/libmmmpod.so:/system/lib/libmmmpod.so \
-    device/htc/evita/prebuilt/lib/libmmstillomx.so:/system/lib/libmmstillomx.so \
-    device/htc/evita/prebuilt/lib/libmpl.so:/system/lib/libmpl.so \
-    device/htc/evita/prebuilt/lib/libnetmgr.so:/system/lib/libnetmgr.so \
     device/htc/evita/prebuilt/lib/libqdi.so:/system/lib/libqdi.so \
     device/htc/evita/prebuilt/lib/libqdp.so:/system/lib/libqdp.so \
     device/htc/evita/prebuilt/lib/libqmi.so:/system/lib/libqmi.so \
@@ -257,9 +253,25 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libqmi_common_so.so:/system/lib/libqmi_common_so.so \
     device/htc/evita/prebuilt/lib/libqmi_csi.so:/system/lib/libqmi_csi.so \
     device/htc/evita/prebuilt/lib/libqmi_encdec.so:/system/lib/libqmi_encdec.so \
-    device/htc/evita/prebuilt/lib/libqmiservices.so:/system/lib/libqmiservices.so \
+    device/htc/evita/prebuilt/lib/libqmiservices.so:/system/lib/libqmiservices.so
+
+# Radio
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/lib/libnetmgr.so:/system/lib/libnetmgr.so \
     device/htc/evita/prebuilt/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \
     device/htc/evita/prebuilt/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so
+
+# Misc
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/lib/libBeautyChat.so:/system/lib/libBeautyChat.so \
+    device/htc/evita/prebuilt/lib/libExtendedExtractor.so:/system/lib/libExtendedExtractor.so \
+    device/htc/evita/prebuilt/lib/libHTC_DIS.so:/system/lib/libHTC_DIS.so \
+    device/htc/evita/prebuilt/lib/libI420colorconvert.so:/system/lib/libI420colorconvert.so \
+    device/htc/evita/prebuilt/lib/libgeofence.so:/system/lib/libgeofence.so \
+    device/htc/evita/prebuilt/lib/libloc_api_v02.so:/system/lib/libloc_api_v02.so \
+    device/htc/evita/prebuilt/lib/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
+    device/htc/evita/prebuilt/lib/libmmmpod.so:/system/lib/libmmmpod.so \
+    device/htc/evita/prebuilt/lib/libmmstillomx.so:/system/lib/libmmstillomx.so
 
 # Vendor
 PRODUCT_COPY_FILES += \
