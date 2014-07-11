@@ -1,1 +1,1 @@
-add_lunch_combo cm_evita-eng
+add_lunch_combo cm_evita-userdebug
