@@ -25,10 +25,12 @@ TARGET_CPU_VARIANT := krait
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
-TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+#TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+TARGET_KERNEL_SOURCE := ../android_kernel_htc_msm8960
 TARGET_KERNEL_CONFIG := elite_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := ../../../../toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.07
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -121,7 +123,7 @@ TW_HTC_LED := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Power
-TARGET_POWERHAL_VARIANT := qcom
+TARGET_POWERHAL_VARIANT := evita
 
 # GPS
 BOARD_HAVE_NEW_QC_GPS := true
