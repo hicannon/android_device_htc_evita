@@ -30,8 +30,10 @@ ro.config.nocheckin=1
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
 ro.lge.proximity.delay=25
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 ro.telephony.call_ring.delay=0
+ro.fm.transmitter=true
+ro.bluetooth.request.master=true
 
 # 3G/HSDPA
 ro.ril.enable.3g.prefix=1
