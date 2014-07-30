@@ -11,7 +11,12 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
-    tinymix
+    tinymix \
+    qcom.fmradio \
+    libqcomfm_jni \
+    FM \
+    FM 2 \
+    FMRecord
 
 # Graphics
 PRODUCT_PACKAGES += \
