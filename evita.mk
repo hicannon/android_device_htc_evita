@@ -14,7 +14,6 @@ PRODUCT_PACKAGES += \
     tinymix \
     qcom.fmradio \
     libqcomfm_jni \
-    FM \
     FM 2 \
     FMRecord
 
