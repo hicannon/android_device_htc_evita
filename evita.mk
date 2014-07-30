@@ -76,7 +76,15 @@ PRODUCT_PACKAGES += \
 # Filesystem
 PRODUCT_PACKAGES += \
     make_ext4fs \
-    setup_fs
+    setup_fs \
+    libmake_f2fs \
+    mkfs.f2fs \
+    libfsck_f2fs \
+    fsck.f2fs \
+    libfibmap_f2fs \
+    fibmap.f2fs \
+    libf2fstat_f2fs \
+    f2fstat
 
 # Misc
 PRODUCT_PACKAGES += \
