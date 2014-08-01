@@ -19,13 +19,11 @@ PRODUCT_PACKAGES += \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
     libgenlock \
-    liboverlay \
     memtrack.msm8960
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libdivxdrmdecrypt \
+    libdashplayer \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
@@ -90,8 +88,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
@@ -308,7 +304,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
-    dev.pm.dyn_samplingrate=1 \
     lpa.decode=true \
     persist.audio.fluence.mode=endfire \
     persist.audio.handset.mic=digital \
@@ -333,7 +328,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     ro.sf.lcd_density=320 \
     ro.telephony.call_ring.multiple=0 \
-    ro.use_data_netmgrd=true \
     ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so \
     ro.vold.umsdirtyratio=40 \
     wifi.interface=wlan0 \
