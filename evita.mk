@@ -13,8 +13,9 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix \
     qcom.fmradio \
+    qcom.fmradio.xml \
     libqcomfm_jni \
-    FM 2 \
+    FM2 \
     FMRecord
 
 # Graphics
