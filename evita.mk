@@ -185,7 +185,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
     device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
-    device/htc/evita/prebuilt/lib/hw/vendor-camera.msm8960.so:/system/lib/hw/vendor-camera.msm8960.so
+    device/htc/evita/prebuilt/lib/hw/camera.vendor.msm8960.so:/system/lib/hw/camera.vendor.msm8960.so
 
 # Audio
 PRODUCT_COPY_FILES += \
