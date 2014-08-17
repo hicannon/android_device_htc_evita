@@ -289,7 +289,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # Device Default Properties
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.sys.root_access=3 \
     ro.adb.secure=3 \
     ro.secure=0
