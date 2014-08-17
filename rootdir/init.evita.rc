@@ -1,4 +1,4 @@
-import init.qcom.usb.rc
+import init.evita.usb.rc
 
 on early-init
     mkdir /mnt/usbdisk 0755 system system
@@ -8,13 +8,28 @@ on early-init
 on init
     mkdir /devlog 0700 root root
 
+    # External storage directories
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
+
+    mkdir /storage/sdcard0 0700 root root
+    mkdir /storage/usbdisk 0700 root root
+
+    # For backwards compatibility
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /storage/usbdisk /usbdisk
+    symlink /storage/usbdisk /mnt/usbdisk
+
+    export EXTERNAL_STORAGE /storage/sdcard0
+
 on fs
     # Create firmware mount points
     mkdir /firmware_radio 0771 system system
     mkdir /firmware_q6 0771 system system
 
     # Mount all mmc partitions
-    mount_all /fstab.qcom
+    mount_all /fstab.evita
 
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
@@ -22,6 +37,10 @@ on fs
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
     symlink /data/tombstones /tombstones
+
+    # For NFC
+    symlink /system/vendor/pittpatt /vendor/pittpatt
+    symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
 
 on post-fs-data
     # Double check perms and set owner
@@ -91,6 +110,10 @@ on boot
     chmod 0660 /proc/bluetooth/sleep/proto
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
+
+    # create symlink to qcn wpa_supplicant folder
+    symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
+    symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
 
     # For modem link
     chown system system /sys/module/serial/parameters/modem_enabled
@@ -173,6 +196,20 @@ on boot
 
 # Services start here
 
+service akmd /system/bin/akmd
+    class main
+    user compass
+    group compass misc input
+
+service cand /system/bin/cand
+    user root
+
+service setup_fs /system/bin/setup_fs mmcblk0p34
+    class core
+    user root
+    group root
+    oneshot
+
 service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
     disabled
     oneshot
@@ -185,17 +222,25 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -ABDKL
     disabled
     oneshot
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service fm_dl /system/bin/sh /system/etc/init.evita.fm.sh
     user root
     group system qcom_oncrpc
     disabled
     oneshot
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+service hciattach /system/bin/sh /system/etc/init.evita.bt.sh
     user bluetooth
     group qcom_oncrpc bluetooth net_bt_admin system
     disabled
     oneshot
+
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
+    class late_start
+    disabled
 
 service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
