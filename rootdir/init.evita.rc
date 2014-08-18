@@ -472,7 +472,7 @@ on property:sys.perf.profile=1
     write /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/max_gpuclk 200000000
     write /sys/devices/platform/kgsl-2d1.1/kgsl/kgsl-2d1/gpuclk 96000000
     write /sys/devices/platform/kgsl-2d1.1/kgsl/kgsl-2d1/max_gpuclk 200000000
-    write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpuclk 200000000
+    write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpuclk 128000000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 300000000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
     start mpdecision
@@ -487,6 +487,6 @@ on property:sys.perf.profile=2
     write /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/max_gpuclk 200000000
     write /sys/devices/platform/kgsl-2d1.1/kgsl/kgsl-2d1/gpuclk 96000000
     write /sys/devices/platform/kgsl-2d1.1/kgsl/kgsl-2d1/max_gpuclk 200000000
-    write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpuclk 300000000
+    write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/gpuclk 128000000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 400000000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor performance
