@@ -25,10 +25,10 @@ TARGET_CPU_VARIANT := krait
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=evita androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
 TARGET_KERNEL_SOURCE := kernel/htc/evita
-TARGET_KERNEL_CONFIG := elite_defconfig
+TARGET_KERNEL_CONFIG := evita_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
 
 # QCOM
@@ -94,7 +94,7 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/fstab.evita
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
