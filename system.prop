@@ -32,6 +32,7 @@ ro.kernel.checkjni=0
 ro.lge.proximity.delay=25
 ro.ril.disable.power.collapse=1
 ro.telephony.call_ring.delay=0
+persist.call_recording.enabled=1
 
 # 3G/HSDPA
 ro.ril.enable.3g.prefix=1
