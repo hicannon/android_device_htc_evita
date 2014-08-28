@@ -163,7 +163,7 @@ on boot
 
     # Flashlight
     chown system system /sys/class/leds/flashlight/brightness
-    chmod 0666          /sys/class/leds/flashlight/brightness
+    chmod 0666 /sys/class/leds/flashlight/brightness
 
     # Low charge current in voice call
     chown radio radio /sys/class/power_supply/battery/phone_call
@@ -442,7 +442,7 @@ on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpufreq/conservative/sampling_rate 120000
     write /sys/devices/system/cpu/cpufreq/conservative/sampling_down_factor 1
     write /sys/devices/system/cpu/cpufreq/conservative/down_threshold 40
-    white /sys/devices/system/cpu/cpufreq/conservative/freq_step 10
+    write /sys/devices/system/cpu/cpufreq/conservative/freq_step 10
     write /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/gpuclk 96000000
     write /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/max_gpuclk 96000000
     write /sys/devices/platform/kgsl-2d1.1/kgsl/kgsl-2d1/gpuclk 96000000
