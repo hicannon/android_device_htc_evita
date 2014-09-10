@@ -27,9 +27,8 @@ BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=evita androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
-TARGET_KERNEL_SOURCE := kernel/htc/evita
-TARGET_KERNEL_CONFIG := evita_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+TARGET_KERNEL_CONFIG := elite_defconfig
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -122,7 +121,7 @@ TW_HTC_LED := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Power
-TARGET_POWERHAL_VARIANT := evita
+TARGET_POWERHAL_VARIANT := qcom
 
 # GPS
 BOARD_HAVE_NEW_QC_GPS := true
