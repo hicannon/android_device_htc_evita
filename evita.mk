@@ -51,10 +51,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.evita.rc \
     lpm.rc \
+    chargeled \
     choice_fn \
-    power_test \
+    detect_key \
     offmode_charging \
-    detect_key
+    offmode_charging_res_images \
+    offmode_charging_warn_res_images \
+    power_test
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -299,7 +302,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
     dalvik.vm.checkjni=false \
     dalvik.vm.dexopt-flags=m=v,o=y \
-    dalvik.vm.jit.codecachesize=0 \
     dalvik.vm.lockprof.threshold=500 \
     debug.composition.type=dyn \
     debug.egl.hw=1 \
@@ -321,7 +323,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.baseband.arch=msm \
     ro.debuggable=1 \
     ro.com.google.locationfeatures=1 \
-    ro.config.low_ram=true \
     ro.ksm.default=1 \
     ro.opengles.version=131072 \
     ro.product.wireless=WCN3660 \
