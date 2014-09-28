@@ -30,7 +30,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
 #TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 TARGET_KERNEL_SOURCE := ../android_kernel_htc_msm8960
 TARGET_KERNEL_CONFIG := elite_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := ../../../../toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.09
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := ../../../../toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.09
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
